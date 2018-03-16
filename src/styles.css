@@ -2,7 +2,7 @@
 
 body {
     background: #334d4d;
-    background-image: image(OGA3KP0.jpg);
+    background-image: url('.\assets\images\OGA3KP0.jpg');
     padding-top: 2.5em;
 }
 
