@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>"
+module.exports = "<router-outlet>\r\n\r\n</router-outlet>"
 
 /***/ }),
 
@@ -83,6 +83,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__members_members_component__ = __webpack_require__("./src/app/members/members.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__auth_service__ = __webpack_require__("./src/app/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_routes__ = __webpack_require__("./src/app/app.routes.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -92,6 +93,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -123,7 +125,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__login_login_component__["a" /* LoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__email_email_component__["a" /* EmailComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__signup_signup_component__["a" /* SignupComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__members_members_component__["a" /* MembersComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__members_members_component__["a" /* MembersComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -155,6 +158,8 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth_service__ = __webpack_require__("./src/app/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signup_signup_component__ = __webpack_require__("./src/app/signup/signup.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__email_email_component__ = __webpack_require__("./src/app/email/email.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+
 
 
 
@@ -162,8 +167,9 @@ var AppModule = (function () {
 
 
 var router = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */] },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_6__home_home_component__["a" /* HomeComponent */] },
     { path: 'signup', component: __WEBPACK_IMPORTED_MODULE_4__signup_signup_component__["a" /* SignupComponent */] },
     { path: 'login-email', component: __WEBPACK_IMPORTED_MODULE_5__email_email_component__["a" /* EmailComponent */] },
     { path: 'members', component: __WEBPACK_IMPORTED_MODULE_2__members_members_component__["a" /* MembersComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_3__auth_service__["a" /* AuthGuard */]] }
@@ -313,17 +319,66 @@ var EmailComponent = (function () {
 
 /***/ }),
 
+/***/ "./src/app/home/home.component.css":
+/***/ (function(module, exports) {
+
+module.exports = "h1 {\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-size: 75px;\r\n    text-align: center;\r\n    color: white;\r\n    border-color: black;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h1>ParenTEENing</h1>\n<button routerLink=\"/login\" class=\"buttn\">Sign In</button>\n<h1>We are Coming Soon!</h1>"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeComponent = (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+            selector: 'app-home',
+            template: __webpack_require__("./src/app/home/home.component.html"),
+            styles: [__webpack_require__("./src/app/home/home.component.css")]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+//# sourceMappingURL=C:/Users/achud/Documents/New Trash/SEHPL/SEHPLWEBSITE/src/home.component.js.map
+
+/***/ }),
+
 /***/ "./src/app/login/login.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#lock {\r\n    width: 30%;\r\n    margin: 1.5em auto 4em auto;\r\n    display: block;\r\n}\r\n\r\n#fb {\r\n    background: #3B5998 url('facebook.df111651ca25e5a54a2e.svg') no-repeat 14px 6px;\r\n    background-size: 47px;\r\n    color: #fff;\r\n}\r\n\r\n#google {\r\n    border: 1px solid #95989A;\r\n    background: #fff url('google.45dff0bab1cfddd02551.svg') no-repeat 25px;\r\n    background-size: 25px;\r\n}\r\n\r\n#email {\r\n    background: #ECECEC url('email.e75a0390ebcf4b02d1bd.svg') no-repeat 25px;\r\n    background-size: 25px;\r\n}\r\n\r\n@media (max-width: 600px) {\r\n    #page {\r\n        padding: 1em;\r\n    }\r\n    #toolbar {\r\n        width: 90%;\r\n        margin-left: -45%;\r\n    }\r\n    #fb {\r\n        background: #3B5998;\r\n    }\r\n    #google {\r\n        background: #fff;\r\n    }\r\n    #email {\r\n        background: #ECECEC;\r\n    }\r\n}"
+module.exports = "#lock {\r\n    width: 30%;\r\n    margin: 1.5em auto 4em auto;\r\n    display: block;\r\n}\r\n\r\n#fb {\r\n    background: #3B5998 url('facebook.df111651ca25e5a54a2e.svg') no-repeat 15px 0px;\r\n    background-size: 47px;\r\n    color: #fff;\r\n}\r\n\r\n#google {\r\n    border: 1px solid #95989A;\r\n    background: #fff url('google.45dff0bab1cfddd02551.svg') no-repeat 25px;\r\n    background-size: 25px;\r\n}\r\n\r\n#email {\r\n    background: #ECECEC url('email.e75a0390ebcf4b02d1bd.svg') no-repeat 25px;\r\n    background-size: 25px;\r\n}\r\n\r\n@media (max-width: 600px) {\r\n    #page {\r\n        padding: 1em;\r\n    }\r\n    #toolbar {\r\n        width: 90%;\r\n        margin-left: -45%;\r\n    }\r\n}\r\n\r\nbody {\r\n    background-image: url('https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fwww.404.ie%2Fassets%2Fimg%2Flogo_blue.png&imgrefurl=https%3A%2F%2Fwww.404.ie%2F&docid=TxWOTnwFX7fj6M&tbnid=vH_lgT_JROMj1M%3A&vet=10ahUKEwjQue7OtPHZAhXGLY8KHU3BBq8QMwgnKAEwAQ..i&w=1033&h=329&hl=en&authuser=0&bih=672&biw=1366&q=404&ved=0ahUKEwjQue7OtPHZAhXGLY8KHU3BBq8QMwgnKAEwAQ&iact=mrc&uact=8')!important;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-container\">\r\n  <img src=\"assets/images/lock.svg\" id=\"lock\">\r\n\r\n    <span class=\"error\" *ngIf=\"error\">{{ error }}</span>\r\n\r\n  <button (click)=\"loginFb()\" id=\"fb\">Login With Facebook</button><br>\r\n  <button (click)=\"loginGoogle()\" id=\"google\">Login With Google</button>\r\n  <button routerLink=\"/login-email\" id=\"email\">Email</button>\r\n\r\n  <a routerLink=\"/signup\" routerLinkActive=\"active\" class=\"alc\">No account? <strong>Create one here</strong></a>\r\n</div>"
+module.exports = "<div class=\"form-container\">\r\n    <a routerLink=\"/home\" id=\"goback\">Back</a>\r\n    <img src=\"assets/images/lock.svg\" id=\"lock\">\r\n\r\n    <span class=\"error\" *ngIf=\"error\">{{ error }}</span>\r\n\r\n    <button (click)=\"loginFb()\" id=\"fb\">Login With Facebook</button><br>\r\n    <button (click)=\"loginGoogle()\" id=\"google\">Login With Google</button>\r\n    <button routerLink=\"/login-email\" id=\"email\">Email</button>\r\n    <div class=\"alc\">Don't have an account? <a routerLink=\"/signup\" routerLinkActive=\"active\"><strong>Sign up</strong></a></div>\r\n</div>"
 
 /***/ }),
 
