@@ -1,43 +1,36 @@
 #lock {
-    width:40%;
+    width: 30%;
     margin: 1.5em auto 4em auto;
-    display:block;
+    display: block;
 }
 
 #fb {
-    background:#3B5998 url('assets/images/facebook.svg') no-repeat 14px 6px;
+    background: #3B5998 url('assets/images/facebook.svg') no-repeat 15px 0px;
     background-size: 47px;
-    color:#fff;
+    color: #fff;
 }
 
 #google {
     border: 1px solid #95989A;
-    background: #fff  url('assets/images/google.svg') no-repeat 25px;
+    background: #fff url('assets/images/google.svg') no-repeat 25px;
     background-size: 25px;
 }
 
 #email {
-    background: #ECECEC  url('assets/images/email.svg') no-repeat 25px;
+    background: #ECECEC url('assets/images/email.svg') no-repeat 25px;
     background-size: 25px;
 }
 
 @media (max-width: 600px) {
     #page {
-        padding:1em;
+        padding: 1em;
     }
     #toolbar {
-        width:90%;
+        width: 90%;
         margin-left: -45%;
     }
-    #fb {
-        background:#3B5998;
-    }
+}
 
-    #google {
-        background: #fff;
-    }
-
-    #email {
-        background: #ECECEC;
-    }
+body {
+    background-image: url('https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fwww.404.ie%2Fassets%2Fimg%2Flogo_blue.png&imgrefurl=https%3A%2F%2Fwww.404.ie%2F&docid=TxWOTnwFX7fj6M&tbnid=vH_lgT_JROMj1M%3A&vet=10ahUKEwjQue7OtPHZAhXGLY8KHU3BBq8QMwgnKAEwAQ..i&w=1033&h=329&hl=en&authuser=0&bih=672&biw=1366&q=404&ved=0ahUKEwjQue7OtPHZAhXGLY8KHU3BBq8QMwgnKAEwAQ&iact=mrc&uact=8')!important;
 }
